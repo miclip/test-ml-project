@@ -19,7 +19,7 @@ Set up the project structure, configure MLflow, and create a robust data loading
   - Initialize `src/__init__.py` and module files
   - Verify MLflow is configured correctly
 
-- [ ] Task 1.2: Implement data loading utilities
+- [x] Task 1.2: Implement data loading utilities (fd46e36)
   - Create `src/data_loader.py` with CSV loading functions
   - Add data validation checks (schema, types, required columns)
   - Document expected data format
