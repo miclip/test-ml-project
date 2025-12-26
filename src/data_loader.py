@@ -229,6 +229,12 @@ def create_sample_data(
     """
     Create sample customer data for testing and development.
 
+    Generates realistic correlations:
+    - Lower tenure -> higher churn probability
+    - Month-to-month contracts -> higher churn probability
+    - Higher monthly charges -> higher churn probability
+    - Electronic check payment -> higher churn probability
+
     Parameters
     ----------
     n_samples : int, default=1000
@@ -236,36 +242,75 @@ def create_sample_data(
     random_state : int, default=42
         Random seed for reproducibility.
     churn_rate : float, default=0.2
-        Proportion of churned customers.
+        Approximate proportion of churned customers.
 
     Returns
     -------
     pd.DataFrame
-        Sample customer dataset.
+        Sample customer dataset with realistic feature-target correlations.
     """
     np.random.seed(random_state)
 
-    n_churned = int(n_samples * churn_rate)
-    n_retained = n_samples - n_churned
+    # Generate base features
+    customer_ids = [f'CUST_{i:05d}' for i in range(n_samples)]
+    tenure = np.random.randint(1, 72, n_samples)
+    monthly_charges = np.random.uniform(20, 100, n_samples).round(2)
 
-    data = {
-        'customer_id': [f'CUST_{i:05d}' for i in range(n_samples)],
-        'tenure': np.random.randint(1, 72, n_samples),
-        'monthly_charges': np.random.uniform(20, 100, n_samples).round(2),
-        'total_charges': np.random.uniform(100, 5000, n_samples).round(2),
-        'contract': np.random.choice(
-            ['Month-to-month', 'One year', 'Two year'],
-            n_samples,
-            p=[0.5, 0.3, 0.2]
-        ),
-        'payment_method': np.random.choice(
-            ['Electronic check', 'Mailed check', 'Bank transfer', 'Credit card'],
-            n_samples
-        ),
-        'churn': [1] * n_churned + [0] * n_retained
-    }
+    # Contract type (affects churn)
+    contract = np.random.choice(
+        ['Month-to-month', 'One year', 'Two year'],
+        n_samples,
+        p=[0.55, 0.25, 0.20]
+    )
 
-    df = pd.DataFrame(data)
+    # Payment method (affects churn)
+    payment_method = np.random.choice(
+        ['Electronic check', 'Mailed check', 'Bank transfer', 'Credit card'],
+        n_samples,
+        p=[0.35, 0.22, 0.22, 0.21]
+    )
+
+    # Calculate total charges based on tenure and monthly (with some noise)
+    total_charges = (tenure * monthly_charges * np.random.uniform(0.8, 1.2, n_samples)).round(2)
+    total_charges = np.clip(total_charges, 100, 8000)
+
+    # Calculate churn probability based on features (realistic correlations)
+    churn_prob = np.zeros(n_samples)
+
+    # Lower tenure increases churn probability
+    churn_prob += (72 - tenure) / 72 * 0.3
+
+    # Higher monthly charges increase churn probability
+    churn_prob += (monthly_charges - 20) / 80 * 0.2
+
+    # Contract type affects churn
+    contract_effect = np.where(
+        contract == 'Month-to-month', 0.25,
+        np.where(contract == 'One year', 0.1, 0.0)
+    )
+    churn_prob += contract_effect
+
+    # Payment method affects churn
+    payment_effect = np.where(payment_method == 'Electronic check', 0.15, 0.0)
+    churn_prob += payment_effect
+
+    # Add some randomness and normalize
+    churn_prob += np.random.uniform(-0.1, 0.1, n_samples)
+    churn_prob = np.clip(churn_prob, 0.05, 0.95)
+
+    # Adjust threshold to achieve target churn rate
+    threshold = np.percentile(churn_prob, 100 * (1 - churn_rate))
+    churn = (churn_prob >= threshold).astype(int)
+
+    df = pd.DataFrame({
+        'customer_id': customer_ids,
+        'tenure': tenure,
+        'monthly_charges': monthly_charges,
+        'total_charges': total_charges,
+        'contract': contract,
+        'payment_method': payment_method,
+        'churn': churn
+    })
 
     # Shuffle the dataframe
     df = df.sample(frac=1, random_state=random_state).reset_index(drop=True)
