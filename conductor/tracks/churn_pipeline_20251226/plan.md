@@ -38,7 +38,7 @@ Set up the project structure, configure MLflow, and create a robust data loading
   - Identify potential data quality issues
   - Generate correlation heatmap
 
-- [ ] Task: Conductor - User Manual Verification 'Phase 1: Project Setup and Data Pipeline' (Protocol in workflow.md)
+- [~] Task: Conductor - User Manual Verification 'Phase 1: Project Setup and Data Pipeline' (Protocol in workflow.md)
 
 ---
 
