@@ -49,7 +49,7 @@ Establish a baseline model and set up experiment tracking with MLflow.
 
 ### Tasks
 
-- [ ] Task 2.1: Configure MLflow experiment tracking
+- [x] Task 2.1: Configure MLflow experiment tracking (67b35a4)
   - Create `src/experiment.py` with MLflow utilities
   - Set up experiment naming conventions
   - Define standard metrics to log
