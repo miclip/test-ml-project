@@ -116,32 +116,32 @@ Complete documentation and ensure reproducibility.
 
 ### Tasks
 
-- [ ] Task 4.1: Create model training script
+- [x] Task 4.1: Create model training script (34240de)
   - Create `src/train.py` with training pipeline
   - Accept configuration parameters
   - Integrate MLflow logging
   - Save model artifacts
 
-- [ ] Task 4.2: Create model card
+- [x] Task 4.2: Create model card (b93cdb1)
   - Document model description and intended use
   - Record training data characteristics
   - List performance metrics across data slices
   - Document limitations and ethical considerations
   - Include version and lineage information
 
-- [ ] Task 4.3: Update project README
+- [x] Task 4.3: Update project README (91b2a3b)
   - Document project setup instructions
   - Add usage examples
   - Include MLflow UI instructions
   - Document notebook execution order
 
-- [ ] Task 4.4: Final validation and cleanup
+- [x] Task 4.4: Final validation and cleanup (ccdbaef)
   - Verify all notebooks run top-to-bottom
   - Ensure all experiments are logged to MLflow
   - Clean up any temporary files
   - Verify reproducibility with fresh environment
 
-- [ ] Task: Conductor - User Manual Verification 'Phase 4: Documentation and Finalization' (Protocol in workflow.md)
+- [~] Task: Conductor - User Manual Verification 'Phase 4: Documentation and Finalization' (Protocol in workflow.md)
 
 ---
 

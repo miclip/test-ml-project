@@ -42,7 +42,9 @@ ENV/
 htmlcov/
 .tox/
 
-# MLflow (keep mlruns for tracking, ignore temp files)
+# MLflow (project root - from CLI training)
+mlflow.db
+mlruns/
 mlartifacts/
 
 # OS
