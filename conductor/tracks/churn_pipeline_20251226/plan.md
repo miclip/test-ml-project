@@ -31,7 +31,7 @@ Set up the project structure, configure MLflow, and create a robust data loading
   - Scale numerical features (StandardScaler)
   - Create train/validation/test split with stratification (70/15/15)
 
-- [ ] Task 1.4: Create data exploration notebook
+- [x] Task 1.4: Create data exploration notebook (3de2b1d)
   - Create `notebooks/01_data_exploration.ipynb`
   - Analyze feature distributions
   - Check class balance of target variable
