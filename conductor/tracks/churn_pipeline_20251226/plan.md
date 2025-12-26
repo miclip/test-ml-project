@@ -54,7 +54,7 @@ Establish a baseline model and set up experiment tracking with MLflow.
   - Set up experiment naming conventions
   - Define standard metrics to log
 
-- [ ] Task 2.2: Train baseline Logistic Regression model
+- [x] Task 2.2: Train baseline Logistic Regression model (ae2971f)
   - Create `notebooks/02_baseline_model.ipynb`
   - Define success criteria (baseline to beat)
   - Train Logistic Regression with default parameters
@@ -62,7 +62,7 @@ Establish a baseline model and set up experiment tracking with MLflow.
   - Evaluate on validation set
   - Generate confusion matrix and ROC curve
 
-- [ ] Task 2.3: Analyze baseline results
+- [~] Task 2.3: Analyze baseline results
   - Document baseline performance metrics
   - Analyze misclassifications
   - Identify potential improvements
