@@ -92,20 +92,20 @@ Improve upon baseline with tree-based models and perform thorough evaluation.
   - Log experiments to MLflow
   - Compare against baseline and Random Forest
 
-- [~] Task 3.3: Select best model and evaluate on test set
+- [x] Task 3.3: Select best model and evaluate on test set (3967d30)
   - Compare all model performances on validation set
   - Select best performing model
   - Evaluate ONCE on held-out test set
   - Generate final metrics: accuracy, precision, recall, F1, AUC-ROC
   - Verify AUC-ROC > 0.75 threshold met
 
-- [ ] Task 3.4: Generate feature importance analysis
+- [x] Task 3.4: Generate feature importance analysis (1c518c5)
   - Extract feature importances from best model
   - Create feature importance visualization
   - Document top contributing features
   - Validate alignment with domain knowledge
 
-- [ ] Task: Conductor - User Manual Verification 'Phase 3: Model Improvement and Evaluation' (Protocol in workflow.md)
+- [~] Task: Conductor - User Manual Verification 'Phase 3: Model Improvement and Evaluation' (Protocol in workflow.md)
 
 ---
 
