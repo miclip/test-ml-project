@@ -42,7 +42,7 @@ Set up the project structure, configure MLflow, and create a robust data loading
 
 ---
 
-## Phase 2: Baseline Model Development
+## Phase 2: Baseline Model Development [checkpoint: a6eac05]
 
 ### Objective
 Establish a baseline model and set up experiment tracking with MLflow.
@@ -68,7 +68,7 @@ Establish a baseline model and set up experiment tracking with MLflow.
   - Identify potential improvements
   - Record experiment ID in notebook
 
-- [ ] Task: Conductor - User Manual Verification 'Phase 2: Baseline Model Development' (Protocol in workflow.md)
+- [x] Task: Conductor - User Manual Verification 'Phase 2: Baseline Model Development' (Protocol in workflow.md)
 
 ---
 
