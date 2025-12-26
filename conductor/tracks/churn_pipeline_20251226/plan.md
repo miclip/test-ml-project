@@ -79,20 +79,20 @@ Improve upon baseline with tree-based models and perform thorough evaluation.
 
 ### Tasks
 
-- [ ] Task 3.1: Train Random Forest classifier
+- [x] Task 3.1: Train Random Forest classifier (14cb448)
   - Create `notebooks/03_model_experiments.ipynb`
   - Train Random Forest with hyperparameter tuning
   - Use cross-validation for robust evaluation
   - Log all experiments to MLflow
   - Compare against baseline
 
-- [ ] Task 3.2: Train Gradient Boosting classifier
+- [x] Task 3.2: Train Gradient Boosting classifier (14cb448)
   - Train GradientBoostingClassifier or XGBoost
   - Tune key hyperparameters (n_estimators, learning_rate, max_depth)
   - Log experiments to MLflow
   - Compare against baseline and Random Forest
 
-- [ ] Task 3.3: Select best model and evaluate on test set
+- [~] Task 3.3: Select best model and evaluate on test set
   - Compare all model performances on validation set
   - Select best performing model
   - Evaluate ONCE on held-out test set
