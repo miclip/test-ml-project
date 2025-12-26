@@ -24,7 +24,7 @@ Set up the project structure, configure MLflow, and create a robust data loading
   - Add data validation checks (schema, types, required columns)
   - Document expected data format
 
-- [ ] Task 1.3: Implement data preprocessing pipeline
+- [x] Task 1.3: Implement data preprocessing pipeline (a89e40d)
   - Create `src/preprocessing.py` with preprocessing functions
   - Handle missing values (imputation strategy)
   - Encode categorical variables (one-hot or label encoding)
