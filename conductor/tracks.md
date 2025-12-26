@@ -4,5 +4,5 @@ This file tracks all major tracks for the project. Each track has its own detail
 
 ---
 
-## [~] Track: Build the core churn prediction pipeline
+## [x] Track: Build the core churn prediction pipeline
 *Link: [./tracks/churn_pipeline_20251226/](./tracks/churn_pipeline_20251226/)*
