@@ -72,7 +72,7 @@ Establish a baseline model and set up experiment tracking with MLflow.
 
 ---
 
-## Phase 3: Model Improvement and Evaluation
+## Phase 3: Model Improvement and Evaluation [checkpoint: 75641e2]
 
 ### Objective
 Improve upon baseline with tree-based models and perform thorough evaluation.
@@ -105,7 +105,7 @@ Improve upon baseline with tree-based models and perform thorough evaluation.
   - Document top contributing features
   - Validate alignment with domain knowledge
 
-- [~] Task: Conductor - User Manual Verification 'Phase 3: Model Improvement and Evaluation' (Protocol in workflow.md)
+- [x] Task: Conductor - User Manual Verification 'Phase 3: Model Improvement and Evaluation' (Protocol in workflow.md)
 
 ---
 
