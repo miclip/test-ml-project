@@ -2,6 +2,8 @@
 
 A machine learning project to predict customer churn using historical data.
 
+Developed entirely using [cc-conductor](https://github.com/malston/cc-conductor) to test ML style guides 
+
 ## Overview
 
 This project uses scikit-learn to build a classification model that predicts
