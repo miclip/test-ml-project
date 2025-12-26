@@ -2,7 +2,7 @@
 
 A machine learning project to predict customer churn using historical data.
 
-Developed entirely using [cc-conductor](https://github.com/malston/cc-conductor) to test ML style guides 
+Developed entirely using [claude-conductor](https://github.com/claudeup/claude-conductor) to test ML style guides 
 
 ## Overview
 
